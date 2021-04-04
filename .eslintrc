@@ -7,8 +7,7 @@
   },
   "extends": ["airbnb", "prettier"],
   "env": {
-    "browser": true,
-    "jest": true
+    "browser": true
   },
   "rules": {
     "max-len": ["error", { "code": 100 }],
