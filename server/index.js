@@ -2,11 +2,14 @@ import express from 'express'
 import dotenv from 'dotenv'
 import chalk from 'chalk'
 import cors from 'cors'
+import passport from 'passport'
 import { createServer } from 'http'
 import { Server } from 'socket.io'
+import cookieSession from 'cookie-session'
+import './auth/github-auth.js'
+import './auth/facebook-auth.js'
 import { addUser, getUser, getUserInRoom, removeUser, users } from './user.js'
 import router from './router.js'
-
 dotenv.config()
 
 const PORT = process.env.PORT || 5000
@@ -14,8 +17,37 @@ const PORT = process.env.PORT || 5000
 const app = express()
 const httpServer = createServer(app)
 const io = new Server(httpServer)
+
+app.use(cookieSession({ name: 'github-auth-session', keys: ['key1', 'key2'] }))
+app.use(
+  cookieSession({ name: 'facebook-auth-session', keys: ['key1', 'key2'] }),
+)
+app.use(passport.initialize())
+app.use(passport.session())
 app.use(cors())
 app.use(router)
+app.get('/auth/error', (req, res) => res.send('Unknown Error'))
+
+app.get(
+  '/auth/github',
+  passport.authenticate('github', { scope: ['user:email'] }),
+)
+app.get('/auth/facebook', passport.authenticate('facebook'))
+
+app.get(
+  '/auth/github/callback',
+  passport.authenticate('github', { failureRedirect: '/auth/error' }),
+  function (req, res) {
+    res.redirect('/')
+  },
+)
+app.get(
+  '/auth/facebook/callback',
+  passport.authenticate('facebook', { failureRedirect: '/auth/error' }),
+  function (req, res) {
+    res.redirect('/')
+  },
+)
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*')
   next()
