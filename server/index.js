@@ -7,6 +7,7 @@ import { createServer } from 'http'
 import { Server } from 'socket.io'
 import redis from 'redis'
 import connectRedis from 'connect-redis'
+import morgan from 'morgan'
 import session from 'express-session'
 import cookieParser from 'cookie-parser'
 import './auth/github-auth.js'
@@ -32,7 +33,7 @@ const io = new Server(httpServer)
 
 app.use(
   session({
-    name: 'oauth-session',
+    name: 'qid',
     store: new RedisStore({
       client: redisClient,
       disableTouch: true,
@@ -46,7 +47,9 @@ app.use(
     secret: process.env.SESSION_SECRET,
   }),
 )
-
+if (process.env.NODE_ENV === 'development') {
+  app.use(morgan('dev'))
+}
 app.use(passport.initialize())
 app.use(passport.session())
 app.use(authRouter)

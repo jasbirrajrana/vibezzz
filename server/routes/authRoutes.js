@@ -3,9 +3,7 @@ import passport from 'passport'
 
 const authRouter = express.Router()
 
-authRouter
-  .route('/auth/github')
-  .get(passport.authenticate('github', { scope: ['user:email'] }))
+authRouter.route('/auth/github').get(passport.authenticate('github'))
 
 authRouter.route('/auth/facebook').get(passport.authenticate('facebook'))
 
@@ -22,7 +20,7 @@ authRouter
   .get(
     passport.authenticate('facebook', { failureRedirect: '/auth/error' }),
     function (req, res) {
-      res.redirect('/')
+      res.redirect('/api/users/user')
     },
   )
 authRouter.route('/auth/error').get((req, res) => res.send('Unknown Error'))

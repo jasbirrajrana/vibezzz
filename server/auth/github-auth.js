@@ -20,7 +20,7 @@ passport.use(
       callbackURL: 'http://localhost:5000/auth/github/callback',
     },
     (accessToken, refreshToken, profile, done) => {
-      return done(null, profile)
+      return done(null, { profile, accessToken, refreshToken })
     },
   ),
 )
