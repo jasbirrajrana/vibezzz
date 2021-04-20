@@ -12,13 +12,17 @@
   "license": "ISC",
   "dependencies": {
     "chalk": "^4.1.0",
+    "connect-redis": "^5.1.0",
+    "cookie-parser": "^1.4.5",
     "cookie-session": "^1.4.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
     "passport": "^0.4.1",
     "passport-facebook": "^3.0.0",
     "passport-github2": "^0.1.12",
+    "redis": "^3.1.1",
     "socket.io": "^4.0.1"
   },
   "husky": {
