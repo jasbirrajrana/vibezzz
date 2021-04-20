@@ -5,7 +5,7 @@ const JoinScreen = () => {
   const [room, setRoom] = useState('')
   return (
     <>
-      <h3>Join</h3>
+      <h1>Join</h1>
       <div>
         <input
           placeholder="Name"

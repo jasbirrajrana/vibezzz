@@ -1,7 +1,7 @@
 import React from 'react'
 
 const LoginScreen = () => {
-  return <>TODO -</>
+  return <></>
 }
 
 export default LoginScreen
