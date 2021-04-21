@@ -1,7 +1,5 @@
 # Contributing to Vibeezz
 
-> Please read the [PRIORITY LIST](https://github.com/benawad/dogehouse/issues/1969) before contributing.
-
 We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's:
 
 - Reporting an issue
@@ -9,9 +7,6 @@ We love your input! We want to make contributing to this project as easy and tra
 - Submitting a fix
 - Proposing new features
 - Becoming a maintainer
-
-<!-- ## Code of Conduct
-The code of conduct is described in [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md). -->
 
 ## Our Development Process
 
@@ -85,20 +80,12 @@ $ npm run dev
 
 Navigate to `/client` and run `yarn`.
 
-<!-- > Mediasoup requires `node >=0.8 <=14` and has [specific requirements](https://mediasoup.org/documentation/v3/mediasoup/installation/#windows) on Windows. -->
-
-<!-- Create an `.env` file and set the following environment variable: -->
-
-```
-<!-- WEBRTC_LISTEN_IP=127.0.0.1 -->
-```
-
 Then run `yarn start`.
 
 ## Issues
 
 We use GitHub issues to track public bugs. Please ensure your description is
-clear and has sufficient instructions to be able to reproduce the issue. Report a bug by <a href="https://github.com/benawad/dogehouse/issues">opening a new issue</a>; it's that easy!
+clear and has sufficient instructions to be able to reproduce the issue. Report a bug by <a href="https://github.com/vibeezz/vibeezz/issues">opening a new issue</a>; it's that easy!
 
 ## Feature Request
 
@@ -110,5 +97,5 @@ Great Feature Requests tend to have:
 
 ## License
 
-By contributing to DogeHouse, you agree that your contributions will be licensed
+By contributing to Vibeezz, you agree that your contributions will be licensed
 under the [LICENSE file](LICENSE).
