@@ -43,7 +43,6 @@ Do this if you only want to do React stuff and don't want to touch Server side:
 Navigate to `/client`
 
 - Run `yarn`
-- Run `yarn staging` (this tells React to connect to a hosted version of the backend for development purposes)
 - Read `client/README.md` for more information and a fixes for known development issues.
 
 ## Manual Full Local Development
