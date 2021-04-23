@@ -1,8 +1,6 @@
-
 <p align="center">
-<img  src="./vibeezz-banner.png" />
+<img  src="./vibeezz-banner-2.png" />
 </p>
-
 
 </p></a>
 <p align="center">
@@ -11,7 +9,6 @@
   Taking Your voice conversations to the next Level </i>
   🚀</strong>
 </p>
-
 
 <h3 align="center">
   <a href="https://github.com/benawad/dogehouse/blob/staging/CONTRIBUTING.md">Contribute</a>
@@ -23,12 +20,10 @@
 
 ---
 
-
-
 ## Branches
 
 - `develop` &#8594; this branch for everything
-- `master` &#8594;  don't touch, this is what's running in production
+- `master` &#8594; don't touch, this is what's running in production
 
 ## Contributions
 
@@ -36,8 +31,6 @@ Vibeezz is open to contributions, but I recommend creating an issue or replying 
 
 Please read [CONTRIBUTING.md](https://github.com/vibeezz/vibeezz/blob/master/CONTRIBUTING.md) for details on this project.
 
-
 ## How to run locally
 
 Check <a href="https://github.com/vibeezz/vibeezz/blob/master/CONTRIBUTING.md#manual-full-local-development">here</a> on how to run locally</a>
-
