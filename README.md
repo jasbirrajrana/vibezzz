@@ -34,3 +34,4 @@ Please read [CONTRIBUTING.md](https://github.com/vibeezz/vibeezz/blob/master/CON
 ## How to run locally
 
 Check <a href="https://github.com/vibeezz/vibeezz/blob/master/CONTRIBUTING.md#manual-full-local-development">here</a> on how to run locally</a>
+
