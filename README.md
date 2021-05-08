@@ -6,7 +6,7 @@
 <p align="center">
   <strong>
   <i>
-  Taking Your voice conversations to the next Level </i>
+  Taking Your conversations to the next Level </i>
   🚀</strong>
 </p>
 
